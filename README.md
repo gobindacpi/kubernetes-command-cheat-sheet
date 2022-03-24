@@ -276,10 +276,11 @@ kubectl get ing --all-namespaces
 ~~~~
 kubectl exec -it mytest -- ls -l /etc/hosts
 ~~~
-
+~~~
 # Check Performance
 ~~~
 # Get node resource usage	
+~~~
 kubectl top node
 # Get pod resource usage	
 kubectl top pod
@@ -288,7 +289,7 @@ kubectl top  --containers
 # List resource utilization for all containers	
 kubectl top pod --all-namespaces --containers=true
 ~~~
-
+~~~
 # Defining Custom Columns for Output
 ~~~
 The following command allows you to use custom columns for outputs, helping to reduce the clutter and providing structured information on the fields you want to view.
@@ -313,9 +314,10 @@ The addition of -w will cause the output to keep going, giving you increased vis
 ~~~
 place while your command is being executed.
 ~~~
-
+~~~
 # Force Delete All Pods Stuck in a Terminating State
 # The following command script will loop through the pods and filter pods in terminating state and force them to be deleted. This is handy when you have a couple of them that are stuck, and you need to get rid of them
+~~~
 ~~~
 for ns in $(kubectl get ns --no-headers | cut -d ' ' -f1); do for po in $(kubectl -n $ns get po --no-headers --ignore-not-found | grep Terminating | cut -d ' ' -f1); do kubectl -n $ns delete po $po --force --grace-period 0; done; done;
 ~~~
