@@ -259,7 +259,6 @@ kubectl api-resources
 
 # Other operations for exploring API resources:
 ~~~
-
 kubectl api-resources --namespaced=true      # All namespaced resources
 kubectl api-resources --namespaced=false     # All non-namespaced resources
 kubectl api-resources -o name                # All resources with simple output (just the resource name)
@@ -277,21 +276,25 @@ kubectl get ing --all-namespaces
 kubectl exec -it mytest -- ls -l /etc/hosts
 ~~~
 # Check Performance
-~~~
 # Get node resource usage	
 ~~~
 kubectl top node
+~~~
 # Get pod resource usage	
+~~~
 kubectl top pod
-# Get resource usage for a given pod	
+~~~
+# Get resource usage for a given pod
+~~~
 kubectl top  --containers
+~~~
 # List resource utilization for all containers	
+~~~
 kubectl top pod --all-namespaces --containers=true
 ~~~
 # Defining Custom Columns for Output
 ~~~
 The following command allows you to use custom columns for outputs, helping to reduce the clutter and providing structured information on the fields you want to view.
-
 kubectl get po --all-namespaces -o=custom-columns=NAME:.metadata.name,USER:.metadata.user,VERSION:.metadata.version
 You can name the columns whatever you want, with the fields acting as key value pairs. The above query will give the following data.
 
