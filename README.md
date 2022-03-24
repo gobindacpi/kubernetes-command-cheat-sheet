@@ -272,7 +272,7 @@ kubectl get ing
 kubectl get ing --all-namespaces
 ~~~
 # Run Shell Command
-~~~~
+~~~
 kubectl exec -it mytest -- ls -l /etc/hosts
 ~~~
 # Check Performance
