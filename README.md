@@ -276,7 +276,6 @@ kubectl get ing --all-namespaces
 ~~~~
 kubectl exec -it mytest -- ls -l /etc/hosts
 ~~~
-~~~
 # Check Performance
 ~~~
 # Get node resource usage	
@@ -288,7 +287,6 @@ kubectl top pod
 kubectl top  --containers
 # List resource utilization for all containers	
 kubectl top pod --all-namespaces --containers=true
-~~~
 ~~~
 # Defining Custom Columns for Output
 ~~~
